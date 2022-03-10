@@ -1,2 +1,2 @@
 #!/bin/bash
-./a.out | c=$?
+./a.out | echo $? > c
