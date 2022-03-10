@@ -1,2 +1,2 @@
 #!/bin/bash
-./a.out | echo $? > c
+gcc -E -o c main.c
