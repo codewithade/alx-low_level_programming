@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
+/**
  * main - Entry point
- *
- * Description: Returns the value of n
- * and specifies either it is negative,
- * porsitive or zero.
  *
  * Return: Always 0 (Success)
  */
