@@ -11,17 +11,17 @@ int main(void)
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-if(n>0)
+if (n > 0)
 {
-puts("is positive");
+printf("%d %s\n", n,"is positive");
 }
-else if(n==0)
+else if (n == 0)
 {
-puts("is zero");
+printf("%d %s\n", n,"is zero");
 }
-else if(n<0)
+else if (n < 0)
 {
-puts("is negative");
+printf("%d %s\n", n,"is negative");
 }
 return (0);
 }
