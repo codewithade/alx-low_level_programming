@@ -6,7 +6,7 @@
  *
  * Return: Always 0 (Success)
  */
-int print_sign(int n)
+void print_sign(int n)
 {
 if (n == 0)
 {
@@ -23,5 +23,4 @@ else
 	putchar('+');
 	putchar('1');
 }
-return (0);
 }
