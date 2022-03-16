@@ -3,11 +3,6 @@
 /**
  * times_table - Entry point
  *
- * print_num - print any number using putchar
- *
- * @n: Number to pass to print_num
- *
- *
  * Return: Always 0 (Success)
  */
 void times_table(void)
@@ -30,7 +25,13 @@ putchar(' ');
 putchar('\n');
 }
 }
-
+/**
+ * print_num - print any number using putchar
+ *
+ * @n: Number to pass to print_num
+ *
+ * Return: Always 0 (Success)
+ */
 void print_num(int n)
 {
 if (n < 0)
