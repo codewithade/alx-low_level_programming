@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * times_table - Entry point
+ * times_table - print 9-times table
  *
  * Return: Always 0 (Success)
  */
@@ -40,7 +40,7 @@ int print_num(int n)
 {
 int is_double;
 
-is_double = 0;
+is_double= 0;
 if (n < 0)
 {
 putchar('-');
