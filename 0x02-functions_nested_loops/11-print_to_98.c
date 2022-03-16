@@ -12,11 +12,24 @@ void print_to_98(int n)
 int MAX;
 
 MAX = 98;
+if (n > MAX)
+{
+for (; n <= MAX; n--)
+{
+if (n == MAX)
+	printf("%d\n", n);
+else
+	printf("%d, ", n);
+}
+}
+else
+{
 for (; n <= MAX; n++)
 {
 if (n == MAX)
 	printf("%d\n", n);
 else
 	printf("%d, ", n);
+}
 }
 }
