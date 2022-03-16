@@ -40,7 +40,7 @@ int print_num(int n)
 {
 int is_double;
 
-is_double= 0;
+is_double = 0;
 if (n < 0)
 {
 putchar('-');
@@ -53,5 +53,5 @@ print_num(n / 10);
 }
 
 putchar(n % 10 + '0');
-return is_double;
+return (is_double);
 }
