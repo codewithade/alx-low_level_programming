@@ -3,6 +3,10 @@
 /**
  * times_table - Entry point
  *
+ * print_num - print any number using putchar
+ *
+ * @n: Number to pass to print_num
+ *
  *
  * Return: Always 0 (Success)
  */
