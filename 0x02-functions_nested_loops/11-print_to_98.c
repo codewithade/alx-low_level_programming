@@ -14,7 +14,7 @@ int MAX;
 MAX = 98;
 if (n > MAX)
 {
-for (; n <= MAX; n--)
+for (; n >= MAX; n--)
 {
 if (n == MAX)
 	printf("%d\n", n);
