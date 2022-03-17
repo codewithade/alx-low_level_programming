@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * print_most_numbers
+ * print_most_numbers - Entry point
  *
  * Return: Always 0 (Success)
  */
