@@ -2,7 +2,7 @@
 /**
  * _isdigit - Entry point
  *
- * @c: Number to pass to _isupper function
+ * @c: Number to pass to _isdigit function
  *
  * Return: Always 0 (Success)
  */
