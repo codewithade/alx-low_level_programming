@@ -12,7 +12,7 @@ int j;
 
 for (j = 0; j <= 9; j++)
 {
-if (j == c)
+if (j == c || j + '0' == c)
 	return (1);
 }
 return (0);
