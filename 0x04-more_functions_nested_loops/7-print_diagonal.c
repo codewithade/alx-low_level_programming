@@ -14,7 +14,7 @@ if (n <= 0)
 	putchar('\n');
 else
 {
-for (j = 0; j <= n; j++)
+for (j = 0; j < n; j++)
 {
 print_space(j);
 putchar('\\');
