@@ -10,3 +10,5 @@ void print_diagonal(int n);
 void print_space(int n);
 void print_square(int size);
 void fizz_buzz(void);
+void print_triangle(int size);
+void print_char(int n, char c);
