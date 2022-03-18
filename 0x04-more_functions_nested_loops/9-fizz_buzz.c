@@ -9,6 +9,8 @@
 int main(void)
 {
 fizz_buzz();
+
+return (0);
 }
 /**
  * fizz_buzz - Entry point
