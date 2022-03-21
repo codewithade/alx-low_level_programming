@@ -10,7 +10,7 @@
 void rev_string(char *s)
 {
 int i, count, j, a;
-char p[20];
+char p[500];
 
 a = 0;
 count = _strlen(s);
