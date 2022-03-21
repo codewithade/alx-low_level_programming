@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * reset_to_98 - reset a pointer
+ * swap_int - reset a pointer
  *
  * @a: first pointer to evaluate
  *
