@@ -22,7 +22,9 @@ if (len_s1 < len_s2)
 if (len_s1 > len_s2)
 	return (15);
 
-while (*(s1 + i) != '\0' && *(s2 + i) != '\0')
+d1 = *(s1 + i);
+d2 = *(s2 + i);
+while (d1 != '\0' && d2 != '\0')
 {
 d1 = *(s1 + i);
 d2 = *(s2 + i);
