@@ -33,7 +33,7 @@ return (s);
  *
  * @c: char to convert
  *
- * @Return: Upper case char
+ * @Return: Always 0 (Success)
  */
 char _toupper(char c)
 {
