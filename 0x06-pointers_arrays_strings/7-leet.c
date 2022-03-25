@@ -32,16 +32,35 @@ return (s);
  */
 char get_code(char c)
 {
-if (c == 'a' || c == 'A')
-	return ('4');
-else if (c == 'e' || c == 'E')
-	return ('3');
-else if (c == 'o' || c == 'O')
-	return ('0');
-else if (c == 't' || c == 'T')
-	return ('7');
-else if (c == 'l' || c == 'L')
-	return ('1');
-else
-	return (c);
+int i;
+char a[6];
+char b[6];
+char r[6];
+
+i = 0;
+a[0] = 'a';
+b[0] = 'A';
+r[0] = '4';
+a[1] = 'e';
+b[1] = 'E';
+r[1] = '3';
+a[2] = 'o';
+b[2] = 'O';
+r[2] = '0';
+a[3] = 't';
+b[3] = 'T';
+r[3] = '7';
+a[4] = 'l';
+b[4] = 'L';
+r[4] = '1';
+a[5] = '\0';
+b[5] = '\0';
+r[5] = '\0';
+while (a[i] != '\0')
+{
+if (c == a[i] || c == b[i])
+	return (r[i]);
+i++;
+}
+return (c);
 }
