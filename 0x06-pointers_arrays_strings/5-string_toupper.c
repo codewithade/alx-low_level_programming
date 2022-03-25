@@ -14,7 +14,6 @@ char upper[500];
 
 len =  _strlen(s);
 i = 0;
-
 while (*(s + i) != '\0')
 {
 upper[i] = _toupper(*(s + i));
@@ -29,7 +28,7 @@ return (s);
 }
 
 /**
- * _toupper - conerts a char to uppercase
+ * _toupper - converts a char to uppercase
  *
  * @c: char to convert
  *
