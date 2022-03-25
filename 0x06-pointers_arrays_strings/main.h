@@ -8,3 +8,5 @@ char *string_toupper(char *);
 char _toupper(char c);
 char *cap_string(char *);
 char _isspecial(char c);
+char *leet(char *);
+char get_code(char c);
