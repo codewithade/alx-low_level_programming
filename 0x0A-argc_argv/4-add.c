@@ -15,15 +15,18 @@ int main(int argc, char *argv[])
 int sum, i;
 
 sum = 0;
+i = 1;
 if (argc < 2)
-	printf("%d\n", 0);
+{
+printf("%d\n", sum);
+}
 else
 {
 for (i = 1; i < argc; i++)
 {
 if (!atoi(argv[i]))
 {
-printf("Error\n");
+printf("%s\n", "Error");
 return (1);
 }
 sum += atoi(argv[i]);
