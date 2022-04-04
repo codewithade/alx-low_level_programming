@@ -9,7 +9,7 @@
  *
  * Return: Always 0 (Success)
  */
-unsigned int _strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char __attribute__ ((unused)) *accept)
 {
 unsigned int i;
 int ret, j;
