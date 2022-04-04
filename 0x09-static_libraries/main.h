@@ -1,4 +1,5 @@
 int _putchar(char c);
+int is_pres(char *s, char c, int j);
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
