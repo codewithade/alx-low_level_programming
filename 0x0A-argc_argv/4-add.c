@@ -13,6 +13,7 @@
 int main(int argc, char *argv[])
 {
 int sum, i, a, c, num;
+char buf[5];
 
 sum = 0;
 if (argc < 2)
@@ -22,12 +23,15 @@ else
 for (i = 1; i < argc; i++)
 {
 num = atoi(argv[i]);
-if (!num !! a < c)
+snprintf(buf, 10, "%d", num);
+a = _strlen(buf);
+c = _strlen(argv[i]);
+if (!num || a < c)
 {
 printf("Error\n");
 return (1);
 }
-sum += abs(atoi(argv[i]));
+sum += abs(num);
 }
 printf("%d\n", sum);
 }
