@@ -8,7 +8,7 @@
  *
  * @c: character to init alloc memmory
  *
- * @Return: pointer to char array
+ * Return: pointer to char array
  */
 char *create_array(unsigned int size, char c)
 {
