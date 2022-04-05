@@ -5,7 +5,7 @@
  *
  * @s: string of chars
  *
- * @c: character to find 
+ * @c: character to find
  *
  * Return: Always 0 (Success)
  */

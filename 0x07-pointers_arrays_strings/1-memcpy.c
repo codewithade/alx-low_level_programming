@@ -7,7 +7,7 @@
  *
  * @src: source memory area
  *
- * @n: number of bytes of the memory area 
+ * @n: number of bytes of the memory area
  *
  * Return: Pointer to dest
  */
