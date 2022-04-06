@@ -14,17 +14,16 @@ char *p;
 int i, len;
 
 i = 0;
-if (str == NULL)
-	return (NULL);
 len = _strlen(str);
-p = malloc(sizeof(char) * len);
-if (p == NULL)
+p = malloc(sizeof(char) * len + 1);
+if (p == NULL || str == NULL)
 	return (NULL);
-while (i < len)
+while (*(str + i) != '\0')
 {
 *(p + i) = *(str + i);
 i++;
 }
+*(p + i) = '\0';
 return (p);
 }
 /**
