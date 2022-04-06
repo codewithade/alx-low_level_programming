@@ -20,13 +20,12 @@ if (width <= 0 || height <= 0)
 
 p = (int **)malloc(height * sizeof(int *));
 if (p == NULL)
-{
-free(p);
-return (NULL);
-}
+	return (NULL);
+
 *p = (int *)malloc(sizeof(int) * height * width);
 if (*p == NULL || p == NULL)
 {
+free(*p);
 free(p);
 return (NULL);
 }
