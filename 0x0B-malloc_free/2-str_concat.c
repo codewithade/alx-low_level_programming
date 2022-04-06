@@ -7,6 +7,8 @@
  * @s1: first string
  *
  * @s2: second string
+ *
+ * Return: concatenated string
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -21,7 +23,7 @@ if (s2 == NULL)
 l1 = _strlen(s1);
 l2 = _strlen(s2);
 len = l1 + l2;
-p = malloc(sizeof(char) * len + 2);
+p = malloc(sizeof(char) * len + 1);
 if (p == NULL)
 	return (NULL);
 while (*(s1 + i) != '\0')
@@ -31,7 +33,7 @@ i++;
 }
 temp = i;
 i = 0;
-while(*(s2 + i) != '\0')
+while (*(s2 + i) != '\0')
 {
 *(p + temp) = *(s2 + i);
 temp++;
@@ -53,7 +55,7 @@ int i, count;
 
 i = 0;
 count = 0;
-while(*(s + i) != '\0')
+while (*(s + i) != '\0')
 {
 count++;
 i++;
