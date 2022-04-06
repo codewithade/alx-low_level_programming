@@ -20,12 +20,11 @@ len = _strlen(str);
 p = malloc(sizeof(char) * len);
 if (p == NULL)
 	return (NULL);
-while (*(str + i) != '\0')
+while (i < len)
 {
 *(p + i) = *(str + i);
 i++;
 }
-*(p + i) = '\0';
 return (p);
 }
 /**
