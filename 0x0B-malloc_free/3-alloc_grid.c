@@ -7,8 +7,29 @@
  * @width: width of 2D array
  *
  * @height: height f 2D array
+ *
+ * Return: pointer to 2D int array
  */
 int **alloc_grid(int width, int height)
 {
-return (0);
+int i, j;
+int **p;
+
+if (width <= 0 || height <= 0)
+	return (NULL);
+
+p = (int**)malloc(height * sizeof(int*));
+if (p == NULL)
+	return (NULL);
+*p = (int*)malloc(sizeof(int) * height * width);
+for (i = 0; i < height; i++)
+	p[i] = (*p + width * i);
+for (i = 0; i < height; i++)
+{
+for (j = 0; j < width; j++)
+{
+p[i][j] = 0;
+}
+}
+return (p);
 }
