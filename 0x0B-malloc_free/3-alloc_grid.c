@@ -18,10 +18,15 @@ int **p;
 if (width <= 0 || height <= 0)
 	return (NULL);
 
-p = (int**)malloc(height * sizeof(int*));
+p = (int **)malloc(height * sizeof(int *));
 if (p == NULL)
 	return (NULL);
-*p = (int*)malloc(sizeof(int) * height * width);
+*p = (int *)malloc(sizeof(int) * height * width);
+if (*p == NULL)
+{
+free(p);
+return (NULL);
+}
 for (i = 0; i < height; i++)
 	p[i] = (*p + width * i);
 for (i = 0; i < height; i++)
