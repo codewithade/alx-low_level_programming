@@ -10,8 +10,10 @@
  *
  * Return: Nothing
  */
-void free_grid(int **grid, int __attribute__ ((unused)) height)
+void free_grid(int **grid, int height)
 {
+if (grid == NULL || height == 0)
+	return;
 free(*grid);
 free(grid);
 }
