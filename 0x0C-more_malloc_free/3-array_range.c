@@ -7,6 +7,8 @@
  * @min: minimum start point
  *
  * @max: max staend point
+ *
+ * Return: array of integers
  */
 int *array_range(int min, int max)
 {
