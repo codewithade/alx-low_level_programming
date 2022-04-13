@@ -1,3 +1,6 @@
+#ifndef _DOG_H_
+#define _DOG_H_
+#endif
 /**
  * struct dog - xtics of a dog
  * @name: dog name
