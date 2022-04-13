@@ -12,17 +12,24 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+char *n, *o;
 dog_t *d;
+float a;
 
-if (name == NULL || owner == NULL)
+if (name == NULL || owner == NULL || age <= 0)
 	return (NULL);
+
+n = name;
+o = owner;
+a = age;
 
 d = malloc(sizeof(dog_t));
 if (d == NULL)
 	return (NULL);
-d->name = name;
-d->age = age;
-d->owner = owner;
+
+d->name = n;
+d->age = a;
+d->owner = o;
 
 return (d);
 }
