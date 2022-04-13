@@ -29,7 +29,7 @@ if (owner == NULL)
 	owner = temp;
 
 printf("Name: %s\n", name);
-if (age == NULL || age <= 0)
+if (age <= 0)
 	printf("Age: %s\n", temp);
 else
 	printf("Age: %f\n", age);
