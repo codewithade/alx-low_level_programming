@@ -7,7 +7,7 @@
  *
  * @array: array of ints
  * @size: size of the array
- * @action: pointer to function 
+ * @action: pointer to function
  *
  * Return: nothing
  */
@@ -15,7 +15,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 size_t i;
 
-if (action == NULL)
+if (action == NULL || array == NULL)
 	return;
 i = 0;
 while (i < size)
