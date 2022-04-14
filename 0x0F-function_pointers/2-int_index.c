@@ -9,7 +9,7 @@
  * @size: size of the array
  * @cmp: function pointer
  *
- * Return: -1(no match), 0 or -1(size<=0)
+ * Return: numbers
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
