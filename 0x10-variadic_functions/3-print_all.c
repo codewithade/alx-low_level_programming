@@ -62,6 +62,8 @@ int _strlen(const char * const s)
 {
 int i, count;
 
+if (s == NULL)
+	return (-1);
 i = 0;
 count = 0;
 
