@@ -16,10 +16,7 @@ int len, a;
 char *separator, type;
 
 if (format ==  NULL)
-{
-	printf("(nil)\n");
 	return;
-}
 
 len = _strlen(format);
 a = 0;
@@ -43,8 +40,8 @@ va_end(ap);
 /**
  * print_arg - prints args
  *
- * @ap: valist
- * @separator: separates each args
+ * @ap: valist identifier
+ * @separator: separator reps each args
  * @type: data type identifier
  *
  * Return: Nothing
@@ -79,7 +76,7 @@ switch (type)
  *
  * @s: pointer of char
  *
- * Return: length
+ * Return: length or char array
  */
 int _strlen(const char * const s)
 {
