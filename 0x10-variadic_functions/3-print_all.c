@@ -16,7 +16,10 @@ int len, a;
 char *separator, type;
 
 if (format ==  NULL)
+{
+	printf("(nil)\n");
 	return;
+}
 
 len = _strlen(format);
 a = 0;
