@@ -13,20 +13,45 @@ void print_all(const char * const format, ...)
 {
 va_list ap;
 int len, a;
-char *separator, type, *res;
+char *separator, type;
+
+if (format ==  NULL)
+	return;
 
 len = _strlen(format);
 a = 0;
 separator = ", ";
 va_start(ap, format);
 
-while (a < len)
+while (a < (len - 1))
 {
-	if (a == (len - 1))
-		separator = "";
 	type = *(format + a);
-	switch (type)
-	{
+	print_arg(ap, separator, type);
+	a++;
+}
+
+separator = "";
+type = *(format + a);
+print_arg(ap, separator, type);
+
+putchar('\n');
+va_end(ap);
+}
+/**
+ * print_arg - prints args
+ *
+ * @ap: valist
+ * @separator: separates each args
+ * @type: data type identifier
+ *
+ * Return: Nothing
+ */
+void print_arg(va_list ap, char *separator, char type)
+{
+char *res;
+
+switch (type)
+{
 	case 'c':
 		printf("%c%s", va_arg(ap, int), separator);
 		break;
@@ -44,12 +69,7 @@ while (a < len)
 		break;
 	default:
 		break;
-	}
-	a++;
 }
-
-putchar('\n');
-va_end(ap);
 }
 /**
  * _strlen - length of char array
@@ -62,8 +82,6 @@ int _strlen(const char * const s)
 {
 int i, count;
 
-if (s == NULL)
-	return (-1);
 i = 0;
 count = 0;
 
