@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-int num1, num2, result, state;
+int num1, num2, result, s;
 char *operator, *add, *sub, *div, *mul, *mod;
 
 if (argc < 4)
@@ -25,7 +25,7 @@ num1 = atoi(*(argv + 1));
 operator = *(argv + 2);
 num2 = atoi(*(argv + 3));
 
-state = (num2 == 0) ? 0 : 1;
+s = (num2 == 0) ? 0 : 1;
 
 add = "+";
 sub = "-";
@@ -33,7 +33,7 @@ div = "/";
 mul = "*";
 mod = "%";
 
-if ((state == 0) && (strcmp(operator, div) == 0 || strcmp(operator, mod) == 0))
+if ((s == 0) && (strcmp(operator, div) == 0 || strcmp(operator, mod) == 0))
 {
         printf("Error\n");
         return (100);
