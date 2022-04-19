@@ -15,11 +15,8 @@ va_list ap;
 int len, a;
 char *separator, type;
 
-if (format ==  NULL)
+if (format !=  NULL)
 {
-	printf("\n");
-	return;
-}
 
 len = _strlen(format);
 a = 0;
@@ -37,8 +34,9 @@ separator = "";
 type = *(format + a);
 print_arg(ap, separator, type);
 
-putchar('\n');
 va_end(ap);
+}
+putchar('\n');
 }
 /**
  * print_arg - prints args
