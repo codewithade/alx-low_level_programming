@@ -7,7 +7,7 @@
  *
  * @s: operator passed as argument to function
  * @a: first number
- * @b; second number
+ * @b: second number
  *
  * Return: ptr to func corresponding to operator
  */
