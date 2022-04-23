@@ -30,7 +30,5 @@ d->name = n;
 d->age = age;
 d->owner = o;
 
-free(name);
-free(owner);
 return (d);
 }
