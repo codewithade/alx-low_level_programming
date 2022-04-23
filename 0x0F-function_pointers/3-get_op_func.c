@@ -6,12 +6,10 @@
  * get_op_func - returns op
  *
  * @s: operator passed as argument to function
- * @a: first number
- * @b: second number
  *
  * Return: ptr to func corresponding to operator
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 op_t ops[OP_MAX] = {
 	{"+", op_add},

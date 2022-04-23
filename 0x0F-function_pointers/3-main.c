@@ -35,8 +35,8 @@ mod = "%";
 
 if ((s == 0) && (strcmp(operator, div) == 0 || strcmp(operator, mod) == 0))
 {
-        printf("Error\n");
-        return (100);
+	printf("Error\n");
+	return (100);
 }
 
 if (strcmp(operator, add) == 0)
