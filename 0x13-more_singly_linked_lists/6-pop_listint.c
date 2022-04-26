@@ -16,17 +16,12 @@ data = 0;
 if (*head == NULL)
 	return (data);
 
-temp = malloc(sizeof(listint_t));
-if (temp == NULL)
-	return (data);
-
 temp = *head;
+
+*head = (*head)->next;
+
 data = temp->n;
 
-*head = temp->next;
-
 free(temp);
-temp = NULL;
-head = NULL;
 return (data);
 }
