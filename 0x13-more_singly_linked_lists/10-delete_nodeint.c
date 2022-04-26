@@ -21,11 +21,13 @@ if (index == count && last->next != NULL)
 {
 	*head = (*head)->next;
 	free(last);
+	if ((*head)->next == NULL)
+	{
+		free(*(head));
+		*head = NULL;
+	}
 	return (1);
 }
-
-if (last->next == NULL)
-	*head = NULL;
 
 while (last->next != NULL && count != (index - 1))
 {
