@@ -20,8 +20,15 @@ if (temp == NULL)
 temp->n = n;
 temp->next = NULL;
 count = 0;
+last = *head;
 if (*head == NULL && idx == 0)
 {
+	*head = temp;
+	return (*head);
+}
+else if (idx == 0 && last->next != NULL)
+{
+	temp->next = last;
 	*head = temp;
 	return (*head);
 }
