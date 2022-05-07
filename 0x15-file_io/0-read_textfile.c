@@ -29,7 +29,7 @@ bytes_read = read(fd, buf, letters);
 if (validate(bytes_read, fd) == 0)
 	return (0);
 buf[bytes_read] = '\0';
-bytes_read = write(STDIN_FILENO, buf, bytes_read);
+bytes_read = write(STDOUT_FILENO, buf, bytes_read);
 if (validate(bytes_read, fd) == 0)
 	return (0);
 free(buf);
