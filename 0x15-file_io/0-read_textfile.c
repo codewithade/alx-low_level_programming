@@ -16,12 +16,9 @@ char *buf;
 bytes_read = 0;
 if (filename == NULL)
 	return (0);
-
 fd = open(filename, O_RDONLY);
-
 if (fd < 0)
 	return (0);
-
 buf = malloc(sizeof(char) * letters);
 if (buf == NULL)
 {
@@ -29,25 +26,29 @@ if (buf == NULL)
 	return (0);
 }
 bytes_read = read(fd, buf, letters);
-
-if (bytes_read < 0)
-{
-	close(fd);
+if (validate(bytes_read, fd) == 0)
 	return (0);
-}
-
 buf[bytes_read] = '\0';
-
 bytes_read = write(STDIN_FILENO, buf, bytes_read);
-
-if (bytes_read < 0)
-{
-	close(fd);
+if (validate(bytes_read, fd) == 0)
 	return (0);
-}
-
 free(buf);
 close(fd);
-
 return (bytes_read);
+}
+/**
+ * validate - validates the passed params
+ *
+ * @num_bytes: number of bytes read
+ * @fd: File Descriptor
+ * Return: 1 (true) or 0 (false)
+ */
+int validate(ssize_t num_bytes, int fd)
+{
+	if (num_bytes < 0)
+	{
+		close(fd);
+		return (0);
+	}
+	return (1);
 }
