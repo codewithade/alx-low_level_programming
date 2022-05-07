@@ -18,7 +18,7 @@ fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 if (fd < 0)
 	return (-1);
 len = _strlen(text_content);
-bytes_read = write(fd, text_content, len + 1);
+bytes_read = write(fd, text_content, len);
 if (validate(bytes_read, fd) == 0)
 	return (-1);
 close(fd);
