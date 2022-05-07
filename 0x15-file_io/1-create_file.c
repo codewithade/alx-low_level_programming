@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * creat_file - creates a file with filename
+ * create_file - creates a file with filename
  *
  * @filename: The name of the file
  * @text_content: content of the file
@@ -18,6 +18,11 @@ fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 if (fd < 0)
 	return (-1);
 len = _strlen(text_content);
+if (len == -1)
+{
+	text_content = "";
+	len = 0;
+}
 bytes_read = write(fd, text_content, len);
 if (validate(bytes_read, fd) == 0)
 	return (-1);
@@ -50,6 +55,8 @@ int _strlen(const char *s)
 {
 int i, count;
 
+if (s == NULL)
+	return (-1);
 i = 0;
 count = 0;
 while (*(s + i) != '\0')
