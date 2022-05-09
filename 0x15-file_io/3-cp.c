@@ -14,7 +14,8 @@ if (argc < 2)
 	dprintf(STDERR_FILENO, "Usage: cp file_from file-to\n");
 	exit(97);
 }
-_copy(argv[1], argv[2]);
+else
+	_copy(argv[1], argv[2]);
 return (0);
 }
 /**
