@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 if (argc < 3)
 {
-	dprintf(STDERR_FILENO, "Usage: cp file_from file-to\n");
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 	exit(97);
 }
 _copy(argv[1], argv[2]);
@@ -37,8 +37,7 @@ if (write_fd < 0)
 read_fd = open(file_from, O_RDONLY);
 if (read_fd < 0)
 {
-	if (_close(write_fd) == 0)
-		exit(100);
+	close(write_fd);
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	exit(98);
 }
