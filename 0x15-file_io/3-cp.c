@@ -26,7 +26,7 @@ return (0);
  */
 int _copy(char *file_from, char *file_to)
 {
-int write_fd, read_fd;
+int write_fd, read_fd, len;
 char *buf;
 write_fd = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 if (write_fd < 0)
@@ -44,7 +44,11 @@ if (read_fd < 0)
 }
 buf = malloc(sizeof(char) * BUFFER_SIZE);
 while(read(read_fd, buf, BUFFER_SIZE))
-	write(write_fd, buf, _strlen(buf));
+{
+	len = _strlen(buf);
+	write(write_fd, buf, len);
+	memset(buf, 0, len);
+}
 if (_close(write_fd) == 0 || _close(read_fd) == 0)
 	exit(100);
 return (0);
