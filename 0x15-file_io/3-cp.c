@@ -26,8 +26,9 @@ return (0);
  */
 int _copy(char *file_from, char *file_to)
 {
-int write_fd, read_fd, res;
-write_fd = open(file_to, O_CREAT | O_WRONLY | O_TRUNC);
+int write_fd, read_fd;
+char *buf;
+write_fd = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 if (write_fd < 0)
 {
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
@@ -36,14 +37,53 @@ if (write_fd < 0)
 read_fd = open(file_from, O_RDONLY);
 if (read_fd < 0)
 {
-	res = close(write_fd);
-	if (res < 0)
-	{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", write_fd);
-	exit(100);
-	}
+	if (_close(write_fd) == 0)
+		exit(100);
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	exit(98);
 }
+buf = malloc(sizeof(char) * BUFFER_SIZE);
+while(read(read_fd, buf, BUFFER_SIZE))
+	write(write_fd, buf, _strlen(buf));
+if (_close(write_fd) == 0 || _close(read_fd) == 0)
+	exit(100);
+return (0);
+}
+/**
+ * _strlen - returns the string length
+ *
+ * @s: array of chars
+ * Return: length of char array
+ */
+int _strlen(const char *s)
+{
+int i, count;
 
+i = 0;
+count = 0;
+while(*(s + i) != '\0')
+{
+	count++;
+	i++;
+}
+return (count);
+}
+/**
+ * _close - closes a fd
+ *
+ * @fd: file descriptor
+ * Return (1) success or (0) failure
+ */
+int _close(int fd)
+{
+int ret;
+
+ret = close(fd);
+if (ret < 0)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+	return (0);
+}
+
+return (1);
 }
