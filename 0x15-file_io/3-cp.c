@@ -50,6 +50,7 @@ while (read(read_fd, buf, BUFFER_SIZE))
 }
 if (_close(write_fd) == 0 || _close(read_fd) == 0)
 	exit(100);
+free(buf);
 return (0);
 }
 /**
