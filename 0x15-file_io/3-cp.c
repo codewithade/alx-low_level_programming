@@ -1,21 +1,20 @@
 #include "main.h"
 /**
  * main - program entry point
- * 
+ *
  * @argc: Argument count
  * @argv: array of args vars
  *
- * Return 0 (success)
+ * Return: 0 (success)
  */
 int main(int argc, char **argv)
 {
-if (argc < 2)
+if (argc < 3)
 {
 	dprintf(STDERR_FILENO, "Usage: cp file_from file-to\n");
 	exit(97);
 }
-else
-	_copy(argv[1], argv[2]);
+_copy(argv[1], argv[2]);
 return (0);
 }
 /**
@@ -44,7 +43,7 @@ if (read_fd < 0)
 	exit(98);
 }
 buf = malloc(sizeof(char) * BUFFER_SIZE);
-while(read(read_fd, buf, BUFFER_SIZE))
+while (read(read_fd, buf, BUFFER_SIZE))
 {
 	len = _strlen(buf);
 	write(write_fd, buf, len);
@@ -66,7 +65,7 @@ int i, count;
 
 i = 0;
 count = 0;
-while(*(s + i) != '\0')
+while (*(s + i) != '\0')
 {
 	count++;
 	i++;
@@ -77,7 +76,7 @@ return (count);
  * _close - closes a fd
  *
  * @fd: file descriptor
- * Return (1) success or (0) failure
+ * Return: (1) success or (0) failure
  */
 int _close(int fd)
 {
