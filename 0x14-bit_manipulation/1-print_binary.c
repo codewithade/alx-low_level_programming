@@ -7,7 +7,8 @@
  */
 void print_binary(unsigned long int n)
 {
-int power, res;
+int power;
+unsigned long int res;
 
 if (n < 1)
 	putchar('0');
@@ -35,12 +36,13 @@ while (power >= 0)
  * _pow - returns the power of a number
  *
  * @base: the base
- * @index: the index
+ * @power: the index
  * Return: result
  */
-int _pow(int base, int power)
+unsigned long int _pow(int base, int power)
 {
-int i, res;
+int i;
+unsigned long int res;
 
 i = 0;
 res = 1;
